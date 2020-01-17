@@ -1,0 +1,24 @@
+.bg-1980s {
+    background: url(../img/spectrum.jpg) center center no-repeat;
+    background-attachment: fixed;
+  }
+  
+.bg-1900s {
+    background: url(../img/forest.jpg) center center no-repeat;
+    background-attachment: fixed;
+  }
+
+.bg-2000s {
+    background: url(../img/network.jpg) center center no-repeat;
+    background-attachment: fixed;
+}
+
+.bg-2010s {
+  background: url(../img/python.jpg) center center no-repeat;
+  background-attachment: fixed;
+}
+
+.bg-2020s {
+  background: url(../img/dictionary.jpg) center center no-repeat;
+  background-attachment: fixed;
+}

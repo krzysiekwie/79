@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <MainNavbar />
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
@@ -7,6 +8,16 @@
     <router-view/>
   </div>
 </template>
+
+<script>
+import MainNavbar from '@/components/MainNavbar'
+export default {
+  name: 'App',
+  components: {
+    MainNavbar
+  }
+}
+</script>
 
 <style>
 @import 'assets/styles/tailwind.postcss';
