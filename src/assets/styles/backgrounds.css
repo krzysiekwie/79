@@ -3,7 +3,7 @@
     background-attachment: fixed;
   }
   
-.bg-1900s {
+.bg-1990s {
     background: url(../img/forest.jpg) center center no-repeat;
     background-attachment: fixed;
   }
@@ -21,4 +21,8 @@
 .bg-2020s {
   background: url(../img/dictionary.jpg) center center no-repeat;
   background-attachment: fixed;
+}
+
+.h-screen80 {
+  height: 80vh;
 }

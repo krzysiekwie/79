@@ -1,130 +1,234 @@
 <template>
-  <div class="bg-gray-100">
-        <div class="font-serif text-left bg-gray-100 leading-normal py-2 px-10">
-        <p class="text-xl md:text-2xl pt-4">krzwierz79</p>
-        
-        <p class="text-xl mb-6 md:text-2xl pt-4">Quick intro text Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, perspiciatis tempora eveniet quisquam, porro fugiat animi dolorum alias culpa facere eius eos et reiciendis ipsa qui tenetur rem at nisi?</p>
+  <div>
+    <div class="font-serif text-left leading-normal pt-16 pb-2 px-4">
+
+        <p class="text-xl font-extrabold md:text-2xl -mb-6">krz<transition name="slide-fade"><span v-if="showName">ysztof </span></transition>wierz</span><transition name="slide-fade"><span v-if="showName">bicki</span></transition><span @click="showName = !showName" class="text-gray-500 hover:text-gray-600 text-5xl -ml-4">'79</span></p>
+
+        <!-- <transition name="slide-fade">
+        <p v-if="showName" class="text-xl font-extrabold md:text-2xl -mb-6">krzwierz<span @click="showName = !showName" class="text-gray-500 hover:text-gray-600 text-5xl -ml-4">'79</span></p>
+        <p v-else class="text-xl font-extrabold md:text-2xl -mb-6">krzysztof wierzbicki<span @click="showName = !showName" class="text-gray-500 hover:text-gray-600 text-5xl -ml-4">'79</span></p>
+        </transition> -->
+
+        <p class="text-xl text-gray-800 font-thin mb-6 md:text-2xl pl-8 pt-4 leading-snug">professional translator/linguist & enthusiast programmer<br>
+        been messing around with computers since the '80s:<br>
+        <span class="font-semibold">from</span> ZX Spectrum+ and hex-editing savegames in the '90s,<br>
+        <span class="font-semibold">through</span> Linux networking and web development when it was all about HTML, JS, CSS and PHP in the '00s,<br>
+        <span class="font-semibold">to</span> Python for NLP, and Vue.js or React for web in the '10s.</p>
+
     </div>
 
-    <header class="bg-1980s container flex items-center justify-center h-screen mx-auto">
-        <div class="bg-gray-100 font-serif mx-4 mt-20 mb-10 p-4 text-center md:p-8 max-w-screen h-auto">
-          <p class="italic text-sm">
-            November 1, 2019
+    <div class="bg-2020s container flex items-center justify-center h-screen80 mx-auto">
+        <blockquote class="bg-gray-800 opacity-75 rounded-lg mx-4 p-4 text-center md:p-8">
+          <p class="font-serif font-bold italic text-3xl text-white">
+            It's time for something new.
           </p>
-          <h1 class="text-5xl uppercase">
-            Article Title
-          </h1>
-          <p class="text-lg">
-            Author Name Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus itaque necessitatibus tempora accusantium natus sit, officia debitis nemo dolore eum expedita libero provident mollitia porro. Aperiam molestiae odio rerum fugiat! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae placeat repellendus pariatur possimus animi ducimus odio consequuntur molestiae ea cum expedita unde esse, minima tenetur? Itaque illo excepturi voluptates eaque? Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus corrupti aliquid tempora quam nostrum hic? Repudiandae vero eligendi animi velit ipsam omnis modi dignissimos officiis, perferendis minima necessitatibus laborum numquam!
+        </blockquote>
+    </div>
+
+    <div class="font-serif text-left leading-normal py-6 px-4">
+        <p class="text-xl text-gray-800 font-thin mb-6 md:text-2xl px-8 pt-2 leading-snug">
+        2020-2011 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor aperiam optio delectus cum adipisci, laudantium dolore, deserunt culpa magnam ea, consequuntur aspernatur saepe rem accusamus ullam qui voluptatum dolorem est.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor aperiam optio delectus cum adipisci, laudantium dolore, deserunt culpa magnam ea, consequuntur aspernatur saepe rem accusamus ullam qui voluptatum dolorem est.
+      </p>
+      <div class="inline-block mt-6 w-full px-4 lg:w-1/2 xl:w-1/3" v-for="(webProject, index) in WebProjects" v-bind:key="index" v-if="webProject.yearMade > 2010 && webProject.yearMade <= 2020">
+       <ProjectCard :webProject="webProject"/>
+      </div>
+  </div>
+
+      <div class="bg-2010s container flex items-center justify-center h-screen mx-auto">
+        <blockquote class="bg-black opacity-50 rounded-lg font-serif mx-4 p-4 text-center text-white md:p-8">
+          <p class="font-bold italic text-3xl">
+            Making websites for fun and English language learners.
           </p>
+        </blockquote>
+      </div>
+
+      <div class="font-serif text-left leading-normal py-6 px-4">
+          <p class="text-xl text-gray-800 font-thin mb-6 md:text-2xl px-8 pt-2 leading-snug">
+          2010-2001 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor aperiam optio delectus cum adipisci, laudantium dolore, deserunt culpa magnam ea, consequuntur aspernatur saepe rem accusamus ullam qui voluptatum dolorem est.
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor aperiam optio delectus cum adipisci, laudantium dolore, deserunt culpa magnam ea, consequuntur aspernatur saepe rem accusamus ullam qui voluptatum dolorem est.
+        </p>
+        <div class="inline-block mt-6 w-full px-4 lg:w-1/2 xl:w-1/3" v-for="(webProject, index) in WebProjects" v-bind:key="index" v-if="webProject.yearMade > 2000 && webProject.yearMade <= 2010">
+         <ProjectCard :webProject="webProject"/>
         </div>
-      </header>
-      
-      <div class="font-serif leading-normal mx-auto py-12 px-4 max-w-lg">
-        <p class="mb-6 text-xl md:text-2xl uppercase">This is a simple parallax effect created by setting the background attachment property to a fixed position. This technique is not meant for non-decorative images, videos, etc. as those require additional HTML and CSS to work properly.</p>
-        <p class="mb-4 text-lg">Quae commodi reiciendis dignissimos. Rerum molestiae hic dolores assumenda dolor! Corrupti reiciendis maxime fuga, recusandae obcaecati officia cum temporibus dicta quibusdam praesentium, magni, cumque aperiam iusto sequi illum molestiae non.</p>
-        <p class="mb-4 text-lg">In excepturi repellendus eum, qui corrupti rerum perferendis harum adipisci voluptate? Nihil, quidem deleniti libero officia dicta vel asperiores velit molestiae blanditiis, dolore voluptatibus excepturi laudantium at veniam illo. Dolor!</p>
-        <p class="mb-4 text-lg">Neque laudantium minus doloremque id quas quod sint velit corporis unde dolore accusantium delectus optio consequuntur voluptatem sapiente odit dolorum minima harum tenetur, dolor provident reprehenderit. Ex eum provident harum?</p>
-        <p class="mb-4 text-lg">Mollitia temporibus maxime placeat culpa distinctio possimus, praesentium, assumenda quasi eum voluptate magni aspernatur aperiam. Eius voluptates rem eum, facilis inventore hic provident pariatur nam non! At odit iste cum.</p>
-        <p class="mb-4 text-lg">Cumque voluptatibus laboriosam tempore architecto laudantium sint vitae cupiditate voluptate quod tempora saepe odio quasi dolores possimus non totam unde voluptates corrupti, ducimus ipsa enim officiis ipsum maxime eveniet. Aut!</p>
-        <p class="mb-4 text-lg">Maxime facere ut natus libero incidunt alias quam consectetur, nisi delectus exercitationem ab qui perferendis dolorem sequi veritatis nobis eius quas dolore ducimus atque vel. Doloribus mollitia non pariatur modi?</p>
-      </div>
-      
-      <div class="bg-1990s container flex items-center justify-center h-screen mx-auto">
-        <blockquote class="bg-black font-serif mx-4 p-4 text-center text-white md:p-8">
-          <p class="font-bold italic text-3xl">
-            &ldquo;Large, bold pull quote. Hats. Very good.&rdquo;
-          </p>
-        </blockquote>
-      </div>
-      
-      <!-- <div class="font-serif leading-normal mx-auto py-12 px-4 max-w-lg">
-        <p class="mb-4 text-lg">Quae commodi reiciendis dignissimos. Rerum molestiae hic dolores assumenda dolor! Corrupti reiciendis maxime fuga, recusandae obcaecati officia cum temporibus dicta quibusdam praesentium, magni, cumque aperiam iusto sequi illum molestiae non.</p>
-        <p class="mb-4 text-lg">In excepturi repellendus eum, qui corrupti rerum perferendis harum adipisci voluptate? Nihil, quidem deleniti libero officia dicta vel asperiores velit molestiae blanditiis, dolore voluptatibus excepturi laudantium at veniam illo. Dolor!</p>
-        <p class="mb-4 text-lg">Neque laudantium minus doloremque id quas quod sint velit corporis unde dolore accusantium delectus optio consequuntur voluptatem sapiente odit dolorum minima harum tenetur, dolor provident reprehenderit. Ex eum provident harum?</p>
-        <p class="mb-4 text-lg">Mollitia temporibus maxime placeat culpa distinctio possimus, praesentium, assumenda quasi eum voluptate magni aspernatur aperiam. Eius voluptates rem eum, facilis inventore hic provident pariatur nam non! At odit iste cum.</p>
-      </div> -->
+    </div>
 
-    <article>
-        <p>Scroll me! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, fuga officiis. Et, aut, repellendus nisi expedita eaque fugiat qui facilis libero, rerum laboriosam vero! Facilis repellat vel repellendus inventore fuga?</p>
-        <p>Next Par. Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam minus tempore perspiciatis, perferendis quis, dolorem quam sapiente dolores asperiores rem voluptatibus dolor maxime repudiandae cumque. Maiores omnis aliquid nemo!</p>
-        <p>Scroll me! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, fuga officiis. Et, aut, repellendus nisi expedita eaque fugiat qui facilis libero, rerum laboriosam vero! Facilis repellat vel repellendus inventore fuga?</p>
-        <p>Next Par. Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam minus tempore perspiciatis, perferendis quis, dolorem quam sapiente dolores asperiores rem voluptatibus dolor maxime repudiandae cumque. Maiores omnis aliquid nemo!</p>
-        <p>Scroll me! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, fuga officiis. Et, aut, repellendus nisi expedita eaque fugiat qui facilis libero, rerum laboriosam vero! Facilis repellat vel repellendus inventore fuga?</p>
-        <p>Next Par. Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam minus tempore perspiciatis, perferendis quis, dolorem quam sapiente dolores asperiores rem voluptatibus dolor maxime repudiandae cumque. Maiores omnis aliquid nemo!</p>
-    </article>
-        
     <div class="bg-2000s container flex items-center justify-center h-screen mx-auto">
-        <blockquote class="bg-black font-serif mx-4 p-4 text-center text-white md:p-8">
+        <blockquote class="bg-black opacity-50 rounded-lg font-serif mx-4 p-4 text-center text-white md:p-8">
           <p class="font-bold italic text-3xl">
-            &ldquo;Large, bold pull quote. Hats. Very good.&rdquo;
+            Building a multi-apartment LAN and running a Linux server
           </p>
         </blockquote>
     </div>
 
-    <article>
-        <p>Scroll me! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, fuga officiis. Et, aut, repellendus nisi expedita eaque fugiat qui facilis libero, rerum laboriosam vero! Facilis repellat vel repellendus inventore fuga?</p>
-        <p>Next Par. Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam minus tempore perspiciatis, perferendis quis, dolorem quam sapiente dolores asperiores rem voluptatibus dolor maxime repudiandae cumque. Maiores omnis aliquid nemo!</p>
-        <p>Scroll me! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, fuga officiis. Et, aut, repellendus nisi expedita eaque fugiat qui facilis libero, rerum laboriosam vero! Facilis repellat vel repellendus inventore fuga?</p>
-        <p>Next Par. Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam minus tempore perspiciatis, perferendis quis, dolorem quam sapiente dolores asperiores rem voluptatibus dolor maxime repudiandae cumque. Maiores omnis aliquid nemo!</p>
-        <p>Scroll me! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, fuga officiis. Et, aut, repellendus nisi expedita eaque fugiat qui facilis libero, rerum laboriosam vero! Facilis repellat vel repellendus inventore fuga?</p>
-        <p>Next Par. Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam minus tempore perspiciatis, perferendis quis, dolorem quam sapiente dolores asperiores rem voluptatibus dolor maxime repudiandae cumque. Maiores omnis aliquid nemo!</p>
-        <p>Scroll me! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, fuga officiis. Et, aut, repellendus nisi expedita eaque fugiat qui facilis libero, rerum laboriosam vero! Facilis repellat vel repellendus inventore fuga?</p>
-        <p>Next Par. Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam minus tempore perspiciatis, perferendis quis, dolorem quam sapiente dolores asperiores rem voluptatibus dolor maxime repudiandae cumque. Maiores omnis aliquid nemo!</p>
-    </article>
+    <div class="font-serif text-left leading-normal py-2 px-4">
+        <p class="text-xl text-gray-800 font-thin mb-6 md:text-2xl px-8 pt-4 leading-snug">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor aperiam optio delectus cum adipisci, laudantium dolore, deserunt culpa magnam ea, consequuntur aspernatur saepe rem accusamus ullam qui voluptatum dolorem est.
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor aperiam optio delectus cum adipisci, laudantium dolore, deserunt culpa magnam ea, consequuntur aspernatur saepe rem accusamus ullam qui voluptatum dolorem est.
+        </p>
+        <div class="inline-block mt-6 w-full px-4 lg:w-1/2 xl:w-1/3" v-for="(webProject, index) in WebProjects" v-bind:key="index" v-if="webProject.yearMade > 1990 && webProject.yearMade <= 2000">
+         <ProjectCard :webProject="webProject"/>
+       </div>
+    </div>
 
-    <div class="bg-2010s container flex items-center justify-center h-screen mx-auto">
-        <blockquote class="bg-black font-serif mx-4 p-4 text-center text-white md:p-8">
+    <div class="bg-1990s container flex items-center justify-center h-screen mx-auto">
+        <blockquote class="bg-black opacity-50 rounded-lg font-serif mx-4 p-4 text-center text-white md:p-8">
           <p class="font-bold italic text-3xl">
-            &ldquo;Large, bold pull quote. Hats. Very good.&rdquo;
+            Hacking savegames and MS Office.
           </p>
         </blockquote>
     </div>
 
-    <article>
-        <p>Scroll me! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, fuga officiis. Et, aut, repellendus nisi expedita eaque fugiat qui facilis libero, rerum laboriosam vero! Facilis repellat vel repellendus inventore fuga?</p>
-        <p>Next Par. Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam minus tempore perspiciatis, perferendis quis, dolorem quam sapiente dolores asperiores rem voluptatibus dolor maxime repudiandae cumque. Maiores omnis aliquid nemo!</p>
-        <p>Scroll me! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, fuga officiis. Et, aut, repellendus nisi expedita eaque fugiat qui facilis libero, rerum laboriosam vero! Facilis repellat vel repellendus inventore fuga?</p>
-        <p>Next Par. Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam minus tempore perspiciatis, perferendis quis, dolorem quam sapiente dolores asperiores rem voluptatibus dolor maxime repudiandae cumque. Maiores omnis aliquid nemo!</p>
-        <p>Scroll me! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, fuga officiis. Et, aut, repellendus nisi expedita eaque fugiat qui facilis libero, rerum laboriosam vero! Facilis repellat vel repellendus inventore fuga?</p>
-        <p>Next Par. Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam minus tempore perspiciatis, perferendis quis, dolorem quam sapiente dolores asperiores rem voluptatibus dolor maxime repudiandae cumque. Maiores omnis aliquid nemo!</p>
-        <p>Scroll me! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, fuga officiis. Et, aut, repellendus nisi expedita eaque fugiat qui facilis libero, rerum laboriosam vero! Facilis repellat vel repellendus inventore fuga?</p>
-        <p>Next Par. Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam minus tempore perspiciatis, perferendis quis, dolorem quam sapiente dolores asperiores rem voluptatibus dolor maxime repudiandae cumque. Maiores omnis aliquid nemo!</p>
-    </article>
+    <div class="font-serif text-left leading-normal py-2 px-4">
+        <p class="text-xl text-gray-800 font-thin mb-6 md:text-2xl px-8 pt-4 leading-snug">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor aperiam optio delectus cum adipisci, laudantium dolore, deserunt culpa magnam ea, consequuntur aspernatur saepe rem accusamus ullam qui voluptatum dolorem est.
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor aperiam optio delectus cum adipisci, laudantium dolore, deserunt culpa magnam ea, consequuntur aspernatur saepe rem accusamus ullam qui voluptatum dolorem est.
+        </p>
+        <div class="inline-block mt-6 w-full px-4 lg:w-1/2 xl:w-1/3" v-for="(webProject, index) in WebProjects" v-bind:key="index" v-if="webProject.yearMade > 1980 && webProject.yearMade <= 1990">
+         <ProjectCard :webProject="webProject"/>
+       </div>
+    </div>
 
-    <div class="bg-2020s container flex items-center justify-center h-screen mx-auto">
-        <blockquote class="bg-black font-serif mx-4 p-4 text-center text-white md:p-8">
+    <div class="bg-1980s container flex items-center justify-center h-screen mx-auto">
+        <blockquote class="bg-black opacity-50 rounded-lg font-serif mx-4 p-4 text-center text-white md:p-8">
           <p class="font-bold italic text-3xl">
-            &ldquo;Large, bold pull quote. Hats. Very good.&rdquo;
+            Rewinding tapes at a loaned ZX Spectrum+
           </p>
         </blockquote>
     </div>
 
-    <article>
-        <p>Scroll me! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, fuga officiis. Et, aut, repellendus nisi expedita eaque fugiat qui facilis libero, rerum laboriosam vero! Facilis repellat vel repellendus inventore fuga?</p>
-        <p>Next Par. Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam minus tempore perspiciatis, perferendis quis, dolorem quam sapiente dolores asperiores rem voluptatibus dolor maxime repudiandae cumque. Maiores omnis aliquid nemo!</p>
-        <p>Scroll me! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, fuga officiis. Et, aut, repellendus nisi expedita eaque fugiat qui facilis libero, rerum laboriosam vero! Facilis repellat vel repellendus inventore fuga?</p>
-        <p>Next Par. Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam minus tempore perspiciatis, perferendis quis, dolorem quam sapiente dolores asperiores rem voluptatibus dolor maxime repudiandae cumque. Maiores omnis aliquid nemo!</p>
-        <p>Scroll me! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, fuga officiis. Et, aut, repellendus nisi expedita eaque fugiat qui facilis libero, rerum laboriosam vero! Facilis repellat vel repellendus inventore fuga?</p>
-        <p>Next Par. Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam minus tempore perspiciatis, perferendis quis, dolorem quam sapiente dolores asperiores rem voluptatibus dolor maxime repudiandae cumque. Maiores omnis aliquid nemo!</p>
-        <p>Scroll me! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, fuga officiis. Et, aut, repellendus nisi expedita eaque fugiat qui facilis libero, rerum laboriosam vero! Facilis repellat vel repellendus inventore fuga?</p>
-        <p>Next Par. Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam minus tempore perspiciatis, perferendis quis, dolorem quam sapiente dolores asperiores rem voluptatibus dolor maxime repudiandae cumque. Maiores omnis aliquid nemo!</p>
-    </article>
+    <div class="font-serif text-left leading-normal py-2 px-4">
+        <p class="text-xl text-gray-800 font-thin mb-6 md:text-2xl px-8 pt-4 leading-snug">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor aperiam optio delectus cum adipisci, laudantium dolore, deserunt culpa magnam ea, consequuntur aspernatur saepe rem accusamus ullam qui voluptatum dolorem est.
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor aperiam optio delectus cum adipisci, laudantium dolore, deserunt culpa magnam ea, consequuntur aspernatur saepe rem accusamus ullam qui voluptatum dolorem est.
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor aperiam optio delectus cum adipisci, laudantium dolore, deserunt culpa magnam ea, consequuntur aspernatur saepe rem accusamus ullam qui voluptatum dolorem est.
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor aperiam optio delectus cum adipisci, laudantium dolore, deserunt culpa magnam ea, consequuntur aspernatur saepe rem accusamus ullam qui voluptatum dolorem est.
+        </p>
+    </div>
 
   </div>
 </template>
 
 <script>
+import ProjectCard from './ProjectCard'
 export default {
   name: 'DecadeIndex',
-  props: {
-    msg: String
-  }
+  components: {
+    ProjectCard
+  },
+  data() {
+    return {
+    showName: false,
+    show: true,
+
+    WebProjects: [
+        {
+          name: 'bhp-siedlce.com',
+          yearMade: 2015,
+          topic: 'company splashpage',
+          imageUrl: '/projects/bhp-siedlce.png',
+          imageAlt: 'BHP Siedlce',
+        },
+        {
+          name: 'bhp-siedlce.com',
+          yearMade: 2016,
+          topic: 'company splashpage',
+          imageUrl: '/projects/bhp-siedlce.png',
+          imageAlt: 'BHP Siedlce',
+        },
+        {
+          name: 'bhp-siedlce.com',
+          yearMade: 2019,
+          topic: 'company splashpage',
+          imageUrl: '/projects/bhp-siedlce.png',
+          imageAlt: 'BHP Siedlce',
+        },
+        {
+          name: 'englisht.eu',
+          yearMade: 2010,
+          topic: 'company wordpress',
+          imageUrl: '/projects/englisht.png',
+          imageAlt: 'englisht.eu',
+        },
+        {
+          name: 'englisht.eu',
+          yearMade: 2009,
+          topic: 'company wordpress',
+          imageUrl: '/projects/englisht.png',
+          imageAlt: 'englisht.eu',
+        },
+        {
+          name: 'englisht.eu',
+          yearMade: 2002,
+          topic: 'company wordpress',
+          imageUrl: '/projects/englisht.png',
+          imageAlt: 'englisht.eu',
+        },
+        {
+          name: 'webarchive.com',
+          yearMade: 1995,
+          topic: 'hobby html',
+          imageUrl: '/projects/onet-republika.png',
+          imageAlt: 'webarchive.com',
+        },
+        {
+          name: 'webarchive.com',
+          yearMade: 1998,
+          topic: 'hobby html',
+          imageUrl: '/projects/onet-republika.png',
+          imageAlt: 'webarchive.com',
+        },
+        {
+          name: 'webarchive.com',
+          yearMade: 1991,
+          topic: 'hobby html',
+          imageUrl: '/projects/onet-republika.png',
+          imageAlt: 'webarchive.com',
+        },
+        {
+          name: 'webarchive.com',
+          yearMade: 1993,
+          topic: 'hobby html',
+          imageUrl: '/projects/onet-republika.png',
+          imageAlt: 'webarchive.com',
+        },
+        {
+          name: 'webarchive.com',
+          yearMade: 1990,
+          topic: 'hobby html',
+          imageUrl: '/projects/onet-republika.png',
+          imageAlt: 'webarchive.com',
+        },
+        {
+          name: 'webarchive.com',
+          yearMade: 1989,
+          topic: 'hobby html',
+          imageUrl: '/projects/onet-republika.png',
+          imageAlt: 'webarchive.com',
+        },
+        {
+          name: 'webarchive.com',
+          yearMade: 1981,
+          topic: 'hobby html',
+          imageUrl: '/projects/onet-republika.png',
+          imageAlt: 'webarchive.com',
+        },
+      ]
+  }}
 }
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.slide-fade-enter-active {
+  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-leave-active {
+  transition: all .8s ease;
+}
+.slide-fade-enter, .slide-fade-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+  /* transform: translateY(-20px); */
+  opacity: 0;
+}
 h3 {
   margin: 40px 0 0;
 }

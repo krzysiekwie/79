@@ -1,5 +1,5 @@
  <template>
-    <nav class="fixed p-2 bg-gray-100 w-screen shadow-lg">
+    <nav class="fixed p-2 bg-gray-100 w-screen shadow-lg z-50">
         <ul class="flex border-b">
             <li class="-mb-px mr-1">
             <router-link class="bg-gray-100 inline-block border-l border-t border-r rounded-t py-2 px-4 text-blue-700 font-semibold" to="/">Home</router-link>

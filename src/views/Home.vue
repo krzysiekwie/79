@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <DecadeIndex msg="Welcome to Your Vue.js App"/>
+    <DecadeIndex/>
   </div>
 </template>
 
