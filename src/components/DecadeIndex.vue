@@ -2,7 +2,7 @@
   <div>
     <div class="font-serif text-left leading-normal pt-16 pb-2 px-4">
 
-        <p class="text-xl font-extrabold md:text-2xl -mb-6">krz<transition name="slide-fade"><span v-if="showName">ysztof </span></transition>wierz</span><transition name="slide-fade"><span v-if="showName">bicki</span></transition><span @click="showName = !showName" class="text-gray-500 hover:text-gray-600 text-5xl -ml-4">'79</span></p>
+        <p class="text-xl font-extrabold md:text-2xl -mb-6">krz<transition name="slide-fade"><span v-if="showName">ysztof </span></transition><span>wierz</span><transition name="slide-fade"><span v-if="showName">bicki</span></transition><span @click="showName = !showName" class="text-gray-500 hover:text-gray-600 text-5xl -ml-4">'79</span></p>
 
         <!-- <transition name="slide-fade">
         <p v-if="showName" class="text-xl font-extrabold md:text-2xl -mb-6">krzwierz<span @click="showName = !showName" class="text-gray-500 hover:text-gray-600 text-5xl -ml-4">'79</span></p>
@@ -30,7 +30,7 @@
         2020-2011 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor aperiam optio delectus cum adipisci, laudantium dolore, deserunt culpa magnam ea, consequuntur aspernatur saepe rem accusamus ullam qui voluptatum dolorem est.
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor aperiam optio delectus cum adipisci, laudantium dolore, deserunt culpa magnam ea, consequuntur aspernatur saepe rem accusamus ullam qui voluptatum dolorem est.
       </p>
-      <div class="inline-block mt-6 w-full px-4 lg:w-1/2 xl:w-1/3" v-for="(webProject, index) in WebProjects" v-bind:key="index" v-if="webProject.yearMade > 2010 && webProject.yearMade <= 2020">
+      <div class="inline-block mt-6 w-full px-4 lg:w-1/2 xl:w-1/3" v-for="(webProject, index) in WebProjects10s" v-bind:key="index">
        <ProjectCard :webProject="webProject"/>
       </div>
   </div>
@@ -48,7 +48,7 @@
           2010-2001 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor aperiam optio delectus cum adipisci, laudantium dolore, deserunt culpa magnam ea, consequuntur aspernatur saepe rem accusamus ullam qui voluptatum dolorem est.
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor aperiam optio delectus cum adipisci, laudantium dolore, deserunt culpa magnam ea, consequuntur aspernatur saepe rem accusamus ullam qui voluptatum dolorem est.
         </p>
-        <div class="inline-block mt-6 w-full px-4 lg:w-1/2 xl:w-1/3" v-for="(webProject, index) in WebProjects" v-bind:key="index" v-if="webProject.yearMade > 2000 && webProject.yearMade <= 2010">
+        <div class="inline-block mt-6 w-full px-4 lg:w-1/2 xl:w-1/3" v-for="(webProject, index) in WebProjects00s" v-bind:key="index">
          <ProjectCard :webProject="webProject"/>
         </div>
     </div>
@@ -65,7 +65,7 @@
         <p class="text-xl text-gray-800 font-thin mb-6 md:text-2xl px-8 pt-4 leading-snug">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor aperiam optio delectus cum adipisci, laudantium dolore, deserunt culpa magnam ea, consequuntur aspernatur saepe rem accusamus ullam qui voluptatum dolorem est.
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor aperiam optio delectus cum adipisci, laudantium dolore, deserunt culpa magnam ea, consequuntur aspernatur saepe rem accusamus ullam qui voluptatum dolorem est.
         </p>
-        <div class="inline-block mt-6 w-full px-4 lg:w-1/2 xl:w-1/3" v-for="(webProject, index) in WebProjects" v-bind:key="index" v-if="webProject.yearMade > 1990 && webProject.yearMade <= 2000">
+        <div class="inline-block mt-6 w-full px-4 lg:w-1/2 xl:w-1/3" v-for="(webProject, index) in WebProjects90s" v-bind:key="index">
          <ProjectCard :webProject="webProject"/>
        </div>
     </div>
@@ -82,7 +82,7 @@
         <p class="text-xl text-gray-800 font-thin mb-6 md:text-2xl px-8 pt-4 leading-snug">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor aperiam optio delectus cum adipisci, laudantium dolore, deserunt culpa magnam ea, consequuntur aspernatur saepe rem accusamus ullam qui voluptatum dolorem est.
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor aperiam optio delectus cum adipisci, laudantium dolore, deserunt culpa magnam ea, consequuntur aspernatur saepe rem accusamus ullam qui voluptatum dolorem est.
         </p>
-        <div class="inline-block mt-6 w-full px-4 lg:w-1/2 xl:w-1/3" v-for="(webProject, index) in WebProjects" v-bind:key="index" v-if="webProject.yearMade > 1980 && webProject.yearMade <= 1990">
+        <div class="inline-block mt-6 w-full px-4 lg:w-1/2 xl:w-1/3" v-for="(webProject, index) in WebProjects80s" v-bind:key="index">
          <ProjectCard :webProject="webProject"/>
        </div>
     </div>
@@ -210,9 +210,32 @@ export default {
           imageUrl: '/projects/onet-republika.png',
           imageAlt: 'webarchive.com',
         },
-      ]
-  }}
-}
+      ],
+      }
+  },
+  computed: {
+    WebProjects80s: function() {
+      return this.WebProjects.filter((WebProject) => {
+        return WebProject.yearMade <= 1990
+      })
+    },
+    WebProjects90s: function() {
+      return this.WebProjects.filter((WebProject) => {
+        return WebProject.yearMade > 1990 && WebProject.yearMade <= 2000
+      })
+    },
+    WebProjects00s: function() {
+      return this.WebProjects.filter((WebProject) => {
+        return WebProject.yearMade > 2000 && WebProject.yearMade <= 2010
+      })
+    },
+    WebProjects10s: function() {
+      return this.WebProjects.filter((WebProject) => {
+        return WebProject.yearMade > 2010
+      })
+    }
+    }  
+  }
 
 </script>
 
