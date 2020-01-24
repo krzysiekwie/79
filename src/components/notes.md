@@ -16,6 +16,8 @@ commodore64
 amiga - animacje? scala?
 
 savy - edytowanie hex
+secret service
+https://archive.org/details/secretservicemagazine-1994-05/page/n37
 
 tig tag excel access?
 
