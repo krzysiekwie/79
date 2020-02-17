@@ -1,28 +1,28 @@
 .bg-1980s {
-    background: url(../img/spectrum.jpg) center center no-repeat;
+    background: url(../img/bg_1980s.jpg) center center no-repeat;
     background-attachment: fixed;
-  }
-  
+}
+
 .bg-1990s {
-    background: url(../img/forest.jpg) center center no-repeat;
+    background: url(../img/bg_1990s.jpg) center center no-repeat;
     background-attachment: fixed;
-  }
+}
 
 .bg-2000s {
-    background: url(../img/network.jpg) center center no-repeat;
+    background: url(../img/bg_2000s.jpg) center center no-repeat;
     background-attachment: fixed;
 }
 
 .bg-2010s {
-  background: url(../img/python.jpg) center center no-repeat;
-  background-attachment: fixed;
+    background: url(../img/bg_2010.svg) center center no-repeat;
+    background-attachment: fixed;
 }
 
 .bg-2020s {
-  background: url(../img/dictionary.jpg) center center no-repeat;
-  background-attachment: fixed;
+    background: url(../img/bg_2020s.jpg) center center no-repeat;
+    background-attachment: fixed;
 }
 
 .h-screen80 {
-  height: 80vh;
+    height: 80vh;
 }
