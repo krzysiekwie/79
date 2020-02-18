@@ -14,6 +14,10 @@ npm run serve
 ```
 npm run build
 ```
+### deploy with vue
+```
+```
+
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
