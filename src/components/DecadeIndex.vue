@@ -211,6 +211,7 @@
 
 <script>
 import ProjectCard from "./ProjectCard";
+import json from '../assets/Decades.json'
 export default {
   name: "DecadeIndex",
   components: {
@@ -220,119 +221,19 @@ export default {
     return {
       showName: false,
       show: true,
-
-      WebProjects: [
-        {
-          name: "Python course",
-          yearMade: 2020,
-          topic: "programming",
-          imageUrl: "/projects/20s_python_course.jpg",
-          imageAlt: "Python certificate",
-          projectUrl:
-            "https://coursera.org/share/c4d0025a8f217db0c4e4f0cb5291021a"
-        },
-        {
-          name: "This website",
-          yearMade: 2020,
-          topic: "VueJS, TailwindCSS",
-          imageUrl: "/projects/20s_this_website.jpg",
-          imageAlt: "Website code",
-          projectUrl: "https://github.com/krzysiekwie/79"
-        },
-        {
-          name: "English Test",
-          yearMade: 2019,
-          topic: "Javascript",
-          imageUrl: "/projects/10s_et_test.jpg",
-          imageAlt: "English Test",
-          projectUrl: "http://englisht.eu/test"
-        },
-        {
-          name: "English Verbs",
-          yearMade: 2017,
-          topic: "Javascript",
-          imageUrl: "/projects/10s_et_verbs.jpg",
-          imageAlt: "English Test",
-          projectUrl:
-            "http://englisht.eu/heart_englisht/irregular_verbs_flashtable/verbs.html"
-        },
-        {
-          name: "bhp-siedlce.com",
-          yearMade: 2015,
-          topic: "company splashpage",
-          imageUrl: "/projects/bhp-siedlce.png",
-          imageAlt: "BHP Siedlce",
-          projectUrl: "http://www.bhp-siedlce.com"
-        },
-        {
-          name: "blended learning",
-          yearMade: 2008,
-          topic: "e-learning integration",
-          imageUrl: "/projects/00s_elearning.jpg",
-          imageAlt: "englisht.eu",
-          projectUrl: "http://www.digitalpublishing.de"
-        },
-        // {
-        //   name: "nibylog",
-        //   yearMade: 2006,
-        //   topic: "hobby html",
-        //   imageUrl: "/projects/00s_",
-        //   imageAlt: "webarchive.com",
-        //   projectUrl: "https://archive.org/details/@krzysiekwie?tab=web-archive"
-        // },
-        {
-          name: "Websites",
-          yearMade: 2001,
-          topic: "hobby html",
-          imageUrl: "/projects/00s_website.png",
-          imageAlt: "webarchive.com",
-          projectUrl: "https://archive.org/details/@krzysiekwie?tab=web-archive"
-        },
-        {
-          name: "LAN Admin",
-          yearMade: 2001,
-          topic: "networking",
-          imageUrl: "/projects/00s_freesco.jpg",
-          imageAlt: "freesco",
-          projectUrl: "https://freesco.info"
-        },
-        {
-          name: "Editing Savegames",
-          yearMade: 1994,
-          topic: "hex editing",
-          imageUrl: "/projects/90s_savegames.jpg",
-          imageAlt: "Logo programming",
-          projectUrl:
-            "https://www.businessinsider.com/how-to-hack-your-game-saves-a-basic-guide-to-hex-editing-2011-12?IR=T"
-        },
-        {
-          name: "Logo",
-          yearMade: 1991,
-          topic: "programming",
-          imageUrl: "/projects/80s_logo.jpg",
-          imageAlt: "Logo programming",
-          projectUrl: "https://www.calormen.com/jslogo/"
-        },
-        {
-          name: "ZX Spectrum",
-          yearMade: 1987,
-          topic: "gaming",
-          imageUrl: "/projects/80s_zxspectrum.jpg",
-          imageAlt: "ZX Spectrum OS",
-          projectUrl: "https://jsspeccy.zxdemo.org/"
-        },
-        {
-          name: "Kubuś literka",
-          yearMade: 1986,
-          topic: "programming",
-          imageUrl: "/projects/80s_bajtek.jpg",
-          imageAlt: "Bajtek Magazine",
-          projectUrl: "https://archive.org/details/bajtekmagazine"
-        }
-      ]
     };
   },
   computed: {
+    DecadeTexts() {
+      return json.DecadeTexts.map((texts) => {
+        return texts.text;
+      });
+    },
+    WebProjects() {
+      return json.WebProjects.map((projects) => {
+        return projects;
+      });
+    },
     WebProjects80s: function() {
       return this.WebProjects.filter(WebProject => {
         return WebProject.yearMade <= 1990;

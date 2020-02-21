@@ -1,34 +1,32 @@
 <template>
   <div
-    class=" mx-w-sm md:flex items-center rounded-lg bg-white shadow-lg overflow-hidden"
+    v-tilt="{
+      max: 10,
+      speed: 200,
+      perspective: 2000,
+      easing: 'cubic-bezier(0.42, 0.0, 0.58, 1.0)'
+      }"
+    class="max-h-full mx-w-sm sm:flex items-center rounded-lg bg-white shadow-lg overflow-hidden"
   >
-    <!-- working: <div class="flex items-center rounded-lg bg-white shadow-lg overflow-hidden"> -->
-    <!-- <div class="relative pb-2/3">
+    <div class="sm:flex-shrink-0">
       <img
-        class="absolute h-full w-full object-cover"
-        :src="webProject.imageUrl"
-        :alt="webProject.imageAlt"
-      />
-    </div> -->
-    <div class="md:flex-shrink-0">
-      <img
-        class="rounded-lg md:w-48"
+        class="mx-auto rounded-lg sm:w-48"
         :src="webProject.imageUrl"
         :alt="webProject.imageAlt"
       />
     </div>
-    <div class="px-6 py-4 text-center md:text-left">
-      <h3 class="text-4xl md:text-lg font-semibold text-gray-800">
+    <div class="px-6 py-4 flex-shrink-0 text-center sm:text-left">
+      <h3 class="text-4xl sm:truncate sm:text-lg font-semibold text-gray-800">
         {{ webProject.name }}
       </h3>
-      <p class="text-4xl md:text-lg text-gray-600">
+      <p class="text-4xl sm:truncate sm:text-lg text-gray-600">
         from: {{ webProject.yearMade }}
       </p>
-      <p class="text-4xl md:text-lg text-gray-500">{{ webProject.topic }}</p>
+      <p class="text-4xl sm:truncate sm:text-sm text-gray-700">{{ webProject.topic }}</p>
       <div class="mt-4">
         <a
           :href="webProject.projectUrl"
-          class="text-4xl md:text-lg text-md text-indigo-500 hover:text-indigo-400 font-semibold "
+          class="text-4xl sm:text-lg text-md text-indigo-500 hover:text-indigo-300 font-semibold "
           >Open</a
         >
       </div>
