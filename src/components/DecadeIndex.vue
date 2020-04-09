@@ -211,6 +211,8 @@
 
 <script>
 import ProjectCard from "./ProjectCard";
+// import json from '../assets/Decades.json'
+//use above for GitHub
 import json from '../assets/Decades-Local.json'
 export default {
   name: "DecadeIndex",
