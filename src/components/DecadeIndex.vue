@@ -211,7 +211,7 @@
 
 <script>
 import ProjectCard from "./ProjectCard";
-import json from '../assets/Decades.json'
+import json from '../assets/Decades-Local.json'
 export default {
   name: "DecadeIndex",
   components: {
