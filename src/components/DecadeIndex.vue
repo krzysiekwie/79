@@ -50,12 +50,8 @@
       <p
         class="text-xl text-gray-800 font-thin mb-6 md:text-2xl px-8 pt-2 leading-snug"
       >
-        When I first moved my nibylog website to Wordpress I decided making
-        websites is so simple now, nobody needs any help. Indeed writing in
-        English for SEO seemed much better business option. Every now and then,
-        I would change some old PHP at a company I worked for or .zip()
-        something in Python to make a quick translation memory or terminology
-        reference.
+        I'm not sure at which point IT translations and teaching programmers
+        English stopped being enough
       </p>
       <div
         class="inline-block mt-6 w-full px-4 lg:w-1/2 xl:w-1/3"
@@ -82,14 +78,12 @@
       <p
         class="text-xl text-gray-800 font-thin mb-6 md:text-2xl px-8 pt-2 leading-snug"
       >
-        This is when I earned my first money as a webdesigner. I've been putting
-        together websites for fun, from role-playing games, through
-        play-by-email, to fansites, when a local computer store decided they
-        needed to upgrade their static HTML with some JS. In these pre jQuery
-        days I remember my design looked pretty awesome to me, and useful enough
-        to the client to pay for it. I just hoped he would not discover this new
-        technology everyone was excited about, called Flash! <br />Because that
-        one, I did not like...
+        When I first moved my nibylog website to Wordpress I decided making
+        websites is so simple now, nobody needs any help. Indeed writing in
+        English for SEO seemed much better business option. Every now and then,
+        I would change some old PHP at a company I worked for or .zip()
+        something in Python to make a quick translation memory or terminology
+        reference.
       </p>
       <div
         class="inline-block mt-6 w-full px-4 md:w-1/2 lg:w-1/3"
@@ -125,6 +119,18 @@
         originally meaning Speed, later changed to Stable) connection at 115,2
         kb/s.
       </p>
+      <p
+        class="text-xl text-gray-800 font-thin mb-6 md:text-2xl px-8 pt-2 leading-snug"
+      >
+        This is also when I earned my first money as a webdesigner. I've been
+        putting together websites for fun, from role-playing games, through
+        play-by-email, to fansites, when a local computer store decided they
+        needed to upgrade their static HTML with some JS. In these pre jQuery
+        days I remember my design looked pretty awesome to me, and useful enough
+        to the client to pay for it. I just hoped he would not discover this new
+        technology everyone was excited about, called Flash! <br />Because that
+        one, I did not like...
+      </p>
       <div
         class="inline-block mt-6 w-full px-4 lg:w-1/2 xl:w-1/3"
         v-for="(webProject, index) in WebProjects00s"
@@ -140,9 +146,7 @@
       <blockquote
         class="bg-black opacity-50 rounded-lg font-serif mx-4 p-4 text-center text-white md:p-8"
       >
-        <p class="font-bold italic text-3xl">
-          Hacking savegames
-        </p>
+        <p class="font-bold italic text-3xl">Hacking savegames</p>
       </blockquote>
     </div>
 
@@ -213,11 +217,11 @@
 import ProjectCard from "./ProjectCard";
 // import json from '../assets/Decades.json'
 //use above for GitHub
-import json from '../assets/Decades-Local.json'
+import json from "../assets/Decades-Local.json";
 export default {
   name: "DecadeIndex",
   components: {
-    ProjectCard
+    ProjectCard,
   },
   data() {
     return {
@@ -236,32 +240,32 @@ export default {
         return projects;
       });
     },
-    WebProjects80s: function() {
-      return this.WebProjects.filter(WebProject => {
+    WebProjects80s: function () {
+      return this.WebProjects.filter((WebProject) => {
         return WebProject.yearMade <= 1990;
       });
     },
-    WebProjects90s: function() {
-      return this.WebProjects.filter(WebProject => {
+    WebProjects90s: function () {
+      return this.WebProjects.filter((WebProject) => {
         return WebProject.yearMade > 1990 && WebProject.yearMade <= 2000;
       });
     },
-    WebProjects00s: function() {
-      return this.WebProjects.filter(WebProject => {
+    WebProjects00s: function () {
+      return this.WebProjects.filter((WebProject) => {
         return WebProject.yearMade > 2000 && WebProject.yearMade <= 2010;
       });
     },
-    WebProjects10s: function() {
-      return this.WebProjects.filter(WebProject => {
+    WebProjects10s: function () {
+      return this.WebProjects.filter((WebProject) => {
         return WebProject.yearMade > 2010 && WebProject.yearMade < 2020;
       });
     },
-    WebProjects20s: function() {
-      return this.WebProjects.filter(WebProject => {
+    WebProjects20s: function () {
+      return this.WebProjects.filter((WebProject) => {
         return WebProject.yearMade >= 2020;
       });
-    }
-  }
+    },
+  },
 };
 </script>
 
