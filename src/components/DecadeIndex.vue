@@ -18,7 +18,15 @@
       </p>
 
       <p
-        class="text-xl text-gray-800 font-thin mb-6 md:text-2xl pl-8 pt-4 leading-snug"
+        class="
+          text-xl text-gray-800
+          font-thin
+          mb-6
+          md:text-2xl
+          pl-8
+          pt-4
+          leading-snug
+        "
       >
         professional translator/linguist & enthusiast programmer
         <br />been messing around with computers since the '80s:
@@ -35,7 +43,15 @@
     </div>
 
     <div
-      class="bg-2020s container flex items-center justify-center h-screen80 mx-auto"
+      class="
+        bg-2020s
+        container
+        flex
+        items-center
+        justify-center
+        h-screen80
+        mx-auto
+      "
     >
       <blockquote
         class="bg-gray-800 opacity-75 rounded-lg mx-4 p-4 text-center md:p-8"
@@ -48,7 +64,15 @@
 
     <div class="font-serif text-left leading-normal py-6 px-4">
       <p
-        class="text-xl text-gray-800 font-thin mb-6 md:text-2xl px-8 pt-2 leading-snug"
+        class="
+          text-xl text-gray-800
+          font-thin
+          mb-6
+          md:text-2xl
+          px-8
+          pt-2
+          leading-snug
+        "
       >
         I'm not sure at which point IT translations and teaching programmers
         English stopped being enough
@@ -63,10 +87,27 @@
     </div>
 
     <div
-      class="bg-2010s container flex items-center justify-center h-screen mx-auto"
+      class="
+        bg-2010s
+        container
+        flex
+        items-center
+        justify-center
+        h-screen
+        mx-auto
+      "
     >
       <blockquote
-        class="bg-black opacity-50 rounded-lg font-serif mx-4 p-4 text-center text-white md:p-8"
+        class="
+          bg-black
+          opacity-50
+          rounded-lg
+          font-serif
+          mx-4
+          p-4
+          text-center text-white
+          md:p-8
+        "
       >
         <p class="font-bold italic text-3xl">
           Making websites for fun and English language learners.
@@ -76,7 +117,15 @@
 
     <div class="font-serif text-left leading-normal py-6 px-4">
       <p
-        class="text-xl text-gray-800 font-thin mb-6 md:text-2xl px-8 pt-2 leading-snug"
+        class="
+          text-xl text-gray-800
+          font-thin
+          mb-6
+          md:text-2xl
+          px-8
+          pt-2
+          leading-snug
+        "
       >
         When I first moved my nibylog website to Wordpress I decided making
         websites is so simple now, nobody needs any help. Indeed writing in
@@ -95,10 +144,27 @@
     </div>
 
     <div
-      class="bg-2000s container flex items-center justify-center h-screen mx-auto"
+      class="
+        bg-2000s
+        container
+        flex
+        items-center
+        justify-center
+        h-screen
+        mx-auto
+      "
     >
       <blockquote
-        class="bg-black opacity-50 rounded-lg font-serif mx-4 p-4 text-center text-white md:p-8"
+        class="
+          bg-black
+          opacity-50
+          rounded-lg
+          font-serif
+          mx-4
+          p-4
+          text-center text-white
+          md:p-8
+        "
       >
         <p class="font-bold italic text-3xl">
           Building a multi-apartment LAN and running a Linux server
@@ -108,7 +174,15 @@
 
     <div class="font-serif text-left leading-normal py-2 px-4">
       <p
-        class="text-xl text-gray-800 font-thin mb-6 md:text-2xl px-8 pt-4 leading-snug"
+        class="
+          text-xl text-gray-800
+          font-thin
+          mb-6
+          md:text-2xl
+          px-8
+          pt-4
+          leading-snug
+        "
       >
         Listening to the beeps of the modem was expensive, and getting a
         dedicated broad-band connection even more so. Luckily I lived in a block
@@ -120,7 +194,15 @@
         kb/s.
       </p>
       <p
-        class="text-xl text-gray-800 font-thin mb-6 md:text-2xl px-8 pt-2 leading-snug"
+        class="
+          text-xl text-gray-800
+          font-thin
+          mb-6
+          md:text-2xl
+          px-8
+          pt-2
+          leading-snug
+        "
       >
         This is also when I earned my first money as a webdesigner. I've been
         putting together websites for fun, from role-playing games, through
@@ -141,10 +223,27 @@
     </div>
 
     <div
-      class="bg-1990s container flex items-center justify-center h-screen mx-auto"
+      class="
+        bg-1990s
+        container
+        flex
+        items-center
+        justify-center
+        h-screen
+        mx-auto
+      "
     >
       <blockquote
-        class="bg-black opacity-50 rounded-lg font-serif mx-4 p-4 text-center text-white md:p-8"
+        class="
+          bg-black
+          opacity-50
+          rounded-lg
+          font-serif
+          mx-4
+          p-4
+          text-center text-white
+          md:p-8
+        "
       >
         <p class="font-bold italic text-3xl">Hacking savegames</p>
       </blockquote>
@@ -152,7 +251,15 @@
 
     <div class="font-serif text-left leading-normal py-2 px-4">
       <p
-        class="text-xl text-gray-800 font-thin mb-6 md:text-2xl px-8 pt-4 leading-snug"
+        class="
+          text-xl text-gray-800
+          font-thin
+          mb-6
+          md:text-2xl
+          px-8
+          pt-4
+          leading-snug
+        "
       >
         The 90s was a time when I graduated from a loaned Spectrum and Amiga to
         my own pen-and-paper turtle cut-out from a book on Logo programming
@@ -170,10 +277,27 @@
     </div>
 
     <div
-      class="bg-1980s container flex items-center justify-center h-screen mx-auto"
+      class="
+        bg-1980s
+        container
+        flex
+        items-center
+        justify-center
+        h-screen
+        mx-auto
+      "
     >
       <blockquote
-        class="bg-black opacity-50 rounded-lg font-serif mx-4 p-4 text-center text-white md:p-8"
+        class="
+          bg-black
+          opacity-50
+          rounded-lg
+          font-serif
+          mx-4
+          p-4
+          text-center text-white
+          md:p-8
+        "
       >
         <p class="font-bold italic text-3xl">
           Rewinding tapes at a loaned ZX Spectrum+
@@ -183,7 +307,15 @@
 
     <div class="font-serif text-left leading-normal py-2 px-4">
       <p
-        class="text-xl text-gray-800 font-thin mb-6 md:text-2xl px-8 pt-4 leading-snug"
+        class="
+          text-xl text-gray-800
+          font-thin
+          mb-6
+          md:text-2xl
+          px-8
+          pt-4
+          leading-snug
+        "
       >
         I only vaguely remember the quest of going to a local computer club,
         where a bespectaled, sweater-clad wizzard gave me the secret spell of
@@ -192,13 +324,29 @@
         put the wheels in motion for my computer adventure.
       </p>
       <p
-        class="text-xl text-gray-800 font-thin mb-6 md:text-2xl px-8 pt-4 leading-snug"
+        class="
+          text-xl text-gray-800
+          font-thin
+          mb-6
+          md:text-2xl
+          px-8
+          pt-4
+          leading-snug
+        "
       >
         Much clearer is the memory of coding a dancing ASCII figure along with a
         listing from an 1986 issue of Bajtek magazine.
       </p>
       <p
-        class="text-xl text-gray-800 font-thin mb-6 md:text-2xl px-8 pt-4 leading-snug"
+        class="
+          text-xl text-gray-800
+          font-thin
+          mb-6
+          md:text-2xl
+          px-8
+          pt-4
+          leading-snug
+        "
       >
         But mostly I remember playing games on Spectrum.
       </p>
@@ -215,9 +363,9 @@
 
 <script>
 import ProjectCard from "./ProjectCard";
-// import json from '../assets/Decades.json'
-//use above for GitHub
-import json from "../assets/Decades-Local.json";
+//import json from "../assets/Decades.json";
+//use above before running deploy.sh for GitHub and below for local
+// import json from "../assets/Decades-Local.json";
 export default {
   name: "DecadeIndex",
   components: {
