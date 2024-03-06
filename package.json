@@ -17,7 +17,7 @@
     "@ky-is/vue-cli-plugin-tailwind": "^2.0.0",
     "@vue/cli-plugin-babel": "^4.5.8",
     "@vue/cli-plugin-router": "^4.5.8",
-    "@vue/cli-service": "^4.5.8",
+    "@vue/cli-service": "^5.0.8",
     "postcss-preset-env": "^6.6.0",
     "tailwindcss": "^1.9.6",
     "vue-template-compiler": "^2.6.12"
